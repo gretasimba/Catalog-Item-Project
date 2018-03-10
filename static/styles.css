@@ -1,0 +1,227 @@
+* {
+	font-family: "Helvetica Neue Bold", Nanum Gothic, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	font-family: "Helvetica Neue Light", Nanum Gothic, Helvetica, Arial, sans-serif;
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 24px;
+	color: #008CBA;
+	line-height: 29px;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 23px;
+}
+h4 {
+	font-size: 12px;
+	color: #ffffff;
+
+}
+ p {
+ 	font-family: "Helvetica Neue", Nanum Gothic, Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+ 	color: #7d97ad;  
+ 	line-height: 24px;
+ 	font-weight: 400;
+ }
+
+ strong {
+ 	font-size: 16px;
+ 	color: #7d97ad;
+ 	line-height: 24px;
+ }
+
+ a {
+ 	font-size: 14px;
+ 	color: #008CBA;
+ 	line-height: 17px;
+	text-decoration: none;
+ }
+.a:hover {
+	text-decoration: none;
+}
+.padding-top {
+	padding-top: 30px;
+}
+.padding-bottom {
+	padding-bottom: 30px;
+}
+.margin-right {
+	margin-right: 30px;
+}
+.padding-none {
+	padding: 0;
+}
+
+.btn {
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn:hover {
+	border-color: #ba002f;
+}
+.btn.delete {
+	border-color: #aaaaaa;
+	color: white;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: #00ba2e;
+    border-color: #ba002f;
+	color: white;
+}
+.btn.delete:hover {
+	border-color: #aaaaaa;
+	background-color: #ba002f;
+	color: red;
+}
+.glyphicon {
+	margin-right: 10px;
+}
+.top-menu {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.top-menu p {
+	margin-bottom: 0;
+	line-height: 16px;
+}
+.top-menu a {
+	margin-bottom: 0;
+	line-height: 16px;
+	font-size: 16px;
+	color: #7d97ad;
+	font-weight: 400;
+}
+.divider {
+	height: 15px;
+}
+
+.creator {
+	padding-right: 20px;
+	margin-top: -20px;
+	text-align: right;
+	float:right;
+}
+.creator img {
+	width: 100px;
+	border-radius: 50%;
+}
+.creator figcaption {
+	font-size: 14px;
+	color: #000000;
+	font-weight: 800;
+	margin-top: -20px;
+}
+.flash {
+	background-color: #00ba2e;
+	width:100%;
+	text-decoration: none;
+
+}
+.flash ul {
+	background-color: #00ba2e;
+	width:100%;
+	text-decoration: none;
+
+}
+.flash li {
+	list-style-type: none;
+	text-align: center;
+	color: #ffffff;
+}
+
+.bottom-space {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.text-thin {
+	font-weight: 100;
+	color: #2d3c49;
+}
+
+.text-almost-bold {
+	font-weight: 600;
+	font-size: 35px;
+}
+
+.title-super {
+	font-size: 48px;
+}
+
+.text-muted {
+	color: #7d97ad;
+}
+.img-responsive {
+    width: 330px;
+    height: 320px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #676767;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+	text-decoration: none;
+}
+
+.active {
+    background-color: #008CBA;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 350px) {
+	.title-super {
+		font-size: 35px;
+	}
+	
+	.text-almost-bold {
+		font-weight: 600;
+		font-size: 24px;
+		
+	}
+	#social {
+		font-size: 0.5em;
+	}
+}
+@media screen and (min-width: 800px) {
+	.title-super {
+		font-size: 60px;
+	}
+
+}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
