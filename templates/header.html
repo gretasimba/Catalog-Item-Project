@@ -1,0 +1,17 @@
+<header>
+	<div class="row">
+		<div class="col-md-10 text-center text-uppercase">
+			<a href="{{url_for('showHome')}}">
+				<h1 class="title-super">Animal Adopt Center</h1>
+			</a>  
+			<h4 class="subtitle">Meet your friend!</h4>
+		</div>
+		<div class="col-md-2">
+			{% if 'username' not in session %}
+			<a href="{{url_for('showLogin')}}"><button type="button" class="btn btn-success" style="margin-top:8px;">Login</button></a>
+			{% else %}
+			<a href="{{url_for('disconnect')}}"><button type="button" class="btn btn-success" style="margin-top:8px;">Logout</button></a>
+			{% endif %}
+		</div>
+	</div>
+</header>

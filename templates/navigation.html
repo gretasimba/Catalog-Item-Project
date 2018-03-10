@@ -1,0 +1,21 @@
+	<div class="row text-center">
+		<div class="col-md-10">
+			<ul>
+			  {% for c in categories %}
+				{% if c.id == category.id%}
+					<li><a class="active" href="{{url_for('showItems', category_id = c.id)}}"><h3 style="color:#FFFFFF;" class="text-uppercase description-project text-almost-bold">{{ c.name }}</h3></a></li>
+				{% else %}
+					<li><a href="{{url_for('showItems', category_id = c.id)}}"><h3 style="color:#FFFFFF;" class="text-uppercase description-project text-almost-bold">{{ c.name }}</h3></a></li>
+				{% endif %}
+			  {% endfor %}
+			</ul>
+		</div>
+		{% if creator %}
+		<div class="col-md-2">
+			<figure class="creator">
+				<img src="{{ creator.picture}}">
+				<figcaption>{{ creator.name }}</figcaption>
+			</figure>
+		</div>
+		{% endif %}
+	</div>

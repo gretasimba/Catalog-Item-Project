@@ -1,0 +1,68 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+{% include "navigation.html" %}
+
+	<div class="row bottom-space">
+		<div class="col-md-12">
+			<p class="text-muted text-almost-bold">Edit {{item.name}}:</p> 
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="#" method = "post">
+				<label for="name">Name:</label>
+				<div class="form-group">
+					<input type ="text" maxlength="100" class="form-control" name="name" value="{{item.name }}">
+				</div>
+				<label for="picture">URL to picture:</label>
+				<div class="input-group">
+					<input type ="text" class="form-control" size="100" maxlength="255" name="picture" value="{{item.picture }}">
+				</div>
+				<label for="description">Description:</label>
+					<textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
+
+				<label for="color">Color:</label>
+				<div class="input-group">
+					<input type ="text" maxlength="50" class="form-control" name="color" value="{{item.color}}">
+				</div>
+				
+				<label for="age">Age:</label>
+				<div class="input-group">
+					<input type ="text" maxlength="20" class="form-control" name="age" value="{{item.age}}">
+				</div>
+				
+				<label for="gender">Gender:</label>
+				<div class="input-group">
+					<select name="gender">
+						{% if item.gender == "Male" %} 
+						<option value="Male" selected >Male</option>
+						{% else %}
+						<option value="Male" >Male</option>
+						{% endif %}
+						{% if item.gender == "Female" %} 
+						<option value="Female" selected >Female</option>
+						{% else %}
+						<option value="Female" >Female</option>
+						{% endif %}
+					</select>
+				</div>
+				<br>
+				<button type="submit" class="btn btn-default" id="submit" type="submit">
+				<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
+
+				<a href = "{{url_for('deleteItem', category_id = category.id, item_id = item.id)}}">
+				<button type="button" class="btn">
+				<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete
+				</button></a>
+
+				<a href = '{{url_for('showCategories')}}'>
+					<button type="button" class="btn">
+					<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Cancel</button>
+				</a>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

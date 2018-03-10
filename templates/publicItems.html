@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+{% include "navigation.html" %}
+	
+	{% if items !=[] %}
+		{% for item in items %}
+			<div class="row">
+				<div class="col-md-4">
+					<a href="{{url_for('showItem', category_id = item.category_id, item_id = item.id)}}" class="list-group-item" style="border:0px"><img class="img-responsive" src="{{item.picture}}" alt="{{item.name}}"></a>
+				</div>
+				<div class="col-md-8 stackem">
+					<div><h3 class="text-almost-bold">{{item.name}}</h3></div>
+					<div><h3>Gender: {{item.gender}}</h3></div>
+					<div><h3>Age: {{item.age}}</h3></div>
+					<div><h3>Age: {{item.color}}</h3></div>
+				</div>
+
+			</div>
+		
+		{% endfor %}
+	{% else %}
+		<h3>No {{ category.name }} available, come back again soon!</h3>
+
+	{% endif %}
+</div>
+
+
+
+{% endblock %}

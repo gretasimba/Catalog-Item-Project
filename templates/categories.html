@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+{% block content %}
+
+{% include "flash.html" %}
+
+{% include "header.html" %}
+
+	<div class="row text-center">
+		<div class="col-md-12">
+			<ul>
+			  {% for category in categories %}
+			  <li><a href="{{url_for('showItems', category_id = category.id)}}"><h3 style="color:#FFFFFF;" class="text-uppercase description-project text-almost-bold">{{ category.name }}</h3></a></li>
+			  {% endfor %}
+			  <li style="float:right"><a class="active" href="{{url_for('newCategory')}}"><h3 style="color:#FFFFFF;" class="text-uppercase description-project text-almost-bold">Add New Group</h3></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row bottom-space">
+		<div class="col-md-12">
+			<p class="text-muted text-almost-bold">Recently Added:</p> 
+		</div>
+	</div>	
+	<div class="row text-center">
+	{% for i in items %}
+		<div class="col-md-4">
+			<a href="{{url_for('showItem', category_id = i.category_id, item_id = i.id)}}" class="list-group-item" style="border:0px"><img class="img-responsive" src="{{i.picture}}" alt="{{i.name}}"></a>
+			<h3 class="text-uppercase description-project text-almost-bold">{{i.name}}</h3>
+		</div>
+	{% endfor %}
+	</div>
+	
+	
+
+{% endblock %}
