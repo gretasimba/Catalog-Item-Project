@@ -24,4 +24,27 @@ database_setup.py - Defines the database classes and creates an empty database.
 database_insert_data.py - Inserts a selection of animals into the database.
 
 
+#Run the Project
+Download the project zip file to you computer and unzip the file. Or clone this repository to your desktop.
+Open the text-based interface for your operating system (e.g. the terminal window in Linux, the command prompt in Windows).
+Navigate to the project directory and then enter the vagrant directory.
+Bringing the VM up: vagrant up
+Log into the VM with the following command:vagrant ssh
+Navigate to the tournament directory with this command:
 
+cd /vagrant/[you path to adoptcenter]
+
+OAuth setup
+In order to log in to the web app, you will need to get Google+ OAuth app ID and secret. For Google, go to the Google Developers Console.
+
+Once you have your credentials, put the IDs and secrets in the client_secrets.json.
+
+Now run application.py: python application.py
+
+It then starts a web server that serves the application. To view the application, go to the following address using a browser on the host system:
+http://localhost:5000/adoptCenter/
+
+You should see the 6 latest animals that were added to the database. Go ahead and explore the web site. To add an animal, you'll need to log in first with either a Google account.
+ 
+
+#Author Olga Novgorodsky
